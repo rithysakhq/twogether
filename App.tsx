@@ -5,11 +5,10 @@ import { StatusBar } from 'expo-status-bar';
 import { Session } from '@supabase/supabase-js';
 import Purchases from 'react-native-purchases';
 import { supabase } from './src/lib/supabase';
+import { REVENUECAT_API_KEY } from './src/constants/Brand';
 import AuthScreen from './src/screens/AuthScreen';
 import PairingScreen from './src/screens/PairingScreen';
 import HomeScreen from './src/screens/HomeScreen';
-
-const REVENUECAT_API_KEY = 'test_qyJSGGHxHxsiQxNOYKCFtlXiuQf';
 
 type Profile = {
   id: string;
@@ -26,8 +25,8 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [isPremium, setIsPremium] = useState(false);
 
-  // Initialize RevenueCat once on mount
   useEffect(() => {
+    if (!REVENUECAT_API_KEY) return;
     Purchases.configure({ apiKey: REVENUECAT_API_KEY });
   }, []);
 

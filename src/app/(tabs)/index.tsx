@@ -84,12 +84,12 @@ export default function TodayScreen() {
   async function handleTestOnboarding() {
     try {
       let { error } = await supabase.auth.signInWithPassword({
-        email: 'test@twogether.com',
+        email: 'test@twogether2.example',
         password: 'password123',
       });
       if (error) {
         const { error: signUpError } = await supabase.auth.signUp({
-          email: 'test@twogether.com',
+          email: 'test@twogether2.example',
           password: 'password123',
         });
         if (signUpError) {

@@ -1,8 +1,10 @@
-# Twogether MVP - Execution Plan
+# Twogether 2.0 MVP - Execution Plan
+
+This is a historical implementation archive. It is kept for product context and contains no production secrets.
 
 - [x] **Phase 1: Foundation**
   - [x] Initialize React Native Expo app with TypeScript (`blank-typescript` template, SDK 54).
-  - [x] Move CLAUDE.md, prd.md, design-system.md, tasks/ into `twogether-app/`.
+  - [x] Move project docs into the app repository.
   - [x] Install core deps: `@supabase/supabase-js`, `react-native-url-polyfill`, `react-native-safe-area-context`.
   - [x] Create `src/components`, `src/screens`, `src/lib` directory structure.
   - [x] Create `src/lib/supabase.ts` with placeholder Supabase client init (keys empty).
@@ -52,12 +54,12 @@
 - HomeScreen: `isPremium` + `onPremiumUnlocked` props added; free tier shows `memories.slice(0, 2)` + pink-bordered "✦ Unlock All Memories" upsell card; premium shows all 7. `onPremiumUnlocked` passed through to PaywallScreen modal.
 - AuthScreen: `letterSpacing: 0` added to `input` style — fixes placeholder spacing on email field.
 - **Important:** `react-native-purchases` uses native modules — requires `npx expo run:ios` or a dev client build. Will not work in Expo Go.
-- **Before testing:** Replace `[PASTE_YOUR_REVENUECAT_KEY_HERE]` in App.tsx with your actual RevenueCat API key. Set up a "premium" entitlement and a monthly offering in the RevenueCat dashboard.
+- **Before testing:** Set `EXPO_PUBLIC_REVENUECAT_API_KEY` locally. Set up a "premium" entitlement and a monthly offering in the RevenueCat dashboard.
 
 ### Phase 4 — Completed 2026-04-05
 - No new packages. Pure RN primitives throughout.
 - HomeScreen: replaced bare streak label with a header row (streak left, ⚙ gear right, minWidth/minHeight 44px). Gear opens SettingsScreen modal.
-- SettingsScreen: `<Modal animationType="slide">` — displays pair_code, "Twogether Premium ✦" button → opens PaywallScreen, "Sign Out" button calls `supabase.auth.signOut()` (App.tsx state machine handles routing automatically).
+- SettingsScreen: `<Modal animationType="slide">` — displays pair_code, "Twogether 2.0 Premium ✦" button → opens PaywallScreen, "Sign Out" button calls `supabase.auth.signOut()` (App.tsx state machine handles routing automatically).
 - PaywallScreen: `<Modal animationType="slide">` — headline "Protect Your Connection.", 3 feature cards (∞ Unlimited History, ❄ Streak Freezes, ✦ Exclusive Prompts), CTA button (no-op; RevenueCat wired in next sub-step).
 - Past Memories: consolidated streak history query to also fetch `answer_text` + `question_text`. `buildMemories()` groups by date, excludes today, requires both users answered, sorts desc, caps at 7. Rendered as horizontal `ScrollView` of 240px cards below revealed answers. Hidden when empty.
 - App.tsx: one-line change — passes `pairCode={profile.pair_code ?? ''}` to `<HomeScreen>`.

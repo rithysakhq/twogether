@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Purchases, { PurchasesPackage } from 'react-native-purchases';
+import { APP_NAME } from '../constants/Brand';
 
 type Props = {
   onClose: () => void;
@@ -65,7 +66,7 @@ export default function PaywallScreen({ onClose, onPremiumUnlocked }: Props) {
 
       <ScrollView contentContainerStyle={styles.scroll}>
         {/* Badge */}
-        <Text style={styles.badge}>Twogether Premium</Text>
+        <Text style={styles.badge}>{APP_NAME} Premium</Text>
 
         {/* Headline */}
         <Text style={styles.headline}>Protect Your{'\n'}Connection.</Text>
@@ -100,7 +101,7 @@ export default function PaywallScreen({ onClose, onPremiumUnlocked }: Props) {
           {purchasing ? (
             <ActivityIndicator color="#FFFFFF" />
           ) : (
-            <Text style={styles.ctaText}>Twogether Premium — $4.99/mo</Text>
+            <Text style={styles.ctaText}>{APP_NAME} Premium — $4.99/mo</Text>
           )}
         </TouchableOpacity>
 

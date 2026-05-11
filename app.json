@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "twogether-app",
-    "slug": "twogether-app",
-    "scheme": "twogether",
-    "version": "1.0.0",
+    "name": "Twogether 2.0",
+    "slug": "twogether-2-0",
+    "scheme": "twogether2",
+    "version": "2.0.0",
     "orientation": "portrait",
-    "icon": "./assets/twogether_icon.png",
+    "icon": "./assets/twogether-2-icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -15,12 +15,12 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.twogether-app",
-      "icon": "./assets/twogether_icon.png"
+      "bundleIdentifier": "com.anonymous.twogether2",
+      "icon": "./assets/twogether-2-icon.png"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/twogether_icon.png",
+        "foregroundImage": "./assets/twogether-2-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -31,7 +31,7 @@
         "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
       ],
-      "package": "com.anonymous.twogetherapp"
+      "package": "com.anonymous.twogether2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -40,7 +40,7 @@
       [
         "expo-av",
         {
-          "microphonePermission": "Allow Twogether to access your microphone to record voice messages for your partner."
+          "microphonePermission": "Allow Twogether 2.0 to access your microphone to record voice messages for your partner."
         }
       ],
       "expo-router"

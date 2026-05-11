@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { supabase } from '../lib/supabase';
+import { APP_NAME } from '../constants/Brand';
 
 type Mode = 'signin' | 'signup';
 
@@ -51,7 +52,7 @@ export default function AuthScreen() {
     >
       <SafeAreaView style={styles.container}>
         <View style={styles.inner}>
-          <Text style={styles.title}>Twogether</Text>
+          <Text style={styles.title}>{APP_NAME}</Text>
           <Text style={styles.subtitle}>
             {mode === 'signin' ? 'Welcome back.' : 'Create your account.'}
           </Text>

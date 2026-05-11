@@ -1,4 +1,4 @@
-# Twogether: Design System & Brand Guidelines
+# Twogether 2.0: Design System & Brand Guidelines
 
 **Vibe:** Premium, Stealthy, Dark-Mode Native, High-Contrast Gamification.
 
@@ -14,7 +14,7 @@
 - **Headings:** Sans-serif, bold, tight tracking. (Default system fonts: San Francisco on iOS, Roboto on Android, but strictly weighted heavily).
 - **Body:** Clean, highly legible, 16px base size.
 
-## UI/UX Rules for Claude
+## UI/UX Rules
 - **Hit Areas:** All touchable elements MUST have a minimum height of 44px (Apple HIG standard).
 - **Borders:** Subtle border radii (12px to 16px) for cards and inputs. No sharp corners.
 - **Shadows:** Minimal. In dark mode, use background color lightness to show elevation, not heavy drop shadows.

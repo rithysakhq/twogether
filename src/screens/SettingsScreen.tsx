@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { supabase } from '../lib/supabase';
+import { APP_NAME } from '../constants/Brand';
 
 type Props = {
   pairCode: string;
@@ -47,7 +48,7 @@ export default function SettingsScreen({ pairCode, onClose, onGoToPremium }: Pro
 
         {/* Go Premium */}
         <TouchableOpacity style={styles.actionRow} onPress={onGoToPremium} activeOpacity={0.8}>
-          <Text style={styles.premiumText}>Twogether Premium  ✦</Text>
+          <Text style={styles.premiumText}>{APP_NAME} Premium  ✦</Text>
         </TouchableOpacity>
 
         <View style={styles.divider} />

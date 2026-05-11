@@ -1,11 +1,11 @@
-# Twogether: The LDR "Daily Sync" Feature PRD
+# Twogether 2.0: The LDR "Daily Sync" Feature PRD
 
-**BE:** Claude Code (Subagent) &nbsp;&nbsp;&nbsp; **FE:** Claude Code (Main) &nbsp;&nbsp;&nbsp; **Design:** Tailwind/Expo Default &nbsp;&nbsp;&nbsp; **PM:** User & Gemini &nbsp;&nbsp;&nbsp; **QA:** Claude Code
+**Platform:** Expo and Supabase &nbsp;&nbsp;&nbsp; **Design:** Native mobile, dark-mode first &nbsp;&nbsp;&nbsp; **Status:** MVP foundation
 
 ---
 
 ## ✨ Context
-Long-Distance Relationships (LDRs) suffer from asynchronous communication and emotional decay. Existing apps like "Been Together" act as passive day-counters with low retention and high churn. We are building "Twogether," a gamified, active relationship OS. To validate the app and reach $5k MRR, we are starting with a weekend MVP focused on one high-retention habit loop.
+Long-Distance Relationships (LDRs) suffer from asynchronous communication and emotional decay. Existing apps like "Been Together" act as passive day-counters with low retention and high churn. We are building "Twogether 2.0," a gamified, active relationship OS. To validate the app and reach $5k MRR, we are starting with a weekend MVP focused on one high-retention habit loop.
 
 ---
 
@@ -60,7 +60,7 @@ Achieve a 7-day streak retention rate of 40% among paired couples, proving the "
 ---
 
 ## ✨ V2 Solution
-- RevenueCat integration for "Twogether Premium" ($4.99/mo).
+- RevenueCat integration for "Twogether 2.0 Premium" ($4.99/mo).
 - Premium features: "Streak Freezes" and "Relationship Analytics" (AI-driven insights on their past answers).
 - Custom home screen widgets (iOS/Android).
 

@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, useColorScheme, View } from 'react-
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Colors, Palette } from '../../constants/Colors';
+import { APP_NAME } from '../../constants/Brand';
 
 export default function FoundersNoteScreen() {
   const scheme = useColorScheme() ?? 'dark';
@@ -15,7 +16,7 @@ export default function FoundersNoteScreen() {
       <View style={styles.content}>
         <Text style={styles.headline}>Hi, I'm [Your Name] 👋</Text>
         <Text style={styles.body}>
-          Long distance is brutal. I built Twogether so we could stay connected without the
+          Long distance is brutal. I built {APP_NAME} so we could stay connected without the
           constant pressure of texting. This is a private space just for you two.
         </Text>
       </View>

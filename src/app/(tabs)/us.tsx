@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors, Palette } from '../../constants/Colors';
+import { APP_NAME } from '../../constants/Brand';
 
 export default function UsScreen() {
   const scheme = useColorScheme() ?? 'dark';
@@ -16,7 +17,7 @@ export default function UsScreen() {
         {/* Subscription Status */}
         <Text style={styles.sectionLabel}>Subscription</Text>
         <View style={styles.subscriptionCard}>
-          <Text style={styles.subscriptionTitle}>Twogether Plus</Text>
+          <Text style={styles.subscriptionTitle}>{APP_NAME} Plus</Text>
           <Text style={styles.subscriptionSubtitle}>Shared with Partner</Text>
         </View>
 
